@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidade - Contatos para Gmail</title>
+<link rel="icon" href="icon128.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <strong>Contatos para Gmail</strong>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="privacidade.html" aria-current="page">Política de Privacidade</a>
+    <a href="termos.html">Termos de Uso</a>
+  </nav>
+</header>
+<main>
+  <h1>Política de Privacidade</h1>
+  <p class="meta">Última atualização: 23 de novembro de 2026<br>
+  Responsável: Rodrigo Castro. Contato: <a href="mailto:rodrigobfcastros21@gmail.com">rodrigobfcastros21@gmail.com</a></p>
+
+  <p>A extensão <strong>Contatos para Gmail</strong> ajuda você a preencher os campos Para, Cc e Cco no Gmail com contatos favoritos e do diretório da sua organização, e avisa as próximas reuniões do Google Calendar. Esta política explica quais dados a extensão acessa e como são tratados.</p>
+
+  <h2>Resumo</h2>
+  <ul>
+    <li>Os dados ficam <strong>apenas no seu navegador</strong>, em armazenamento cifrado.</li>
+    <li><strong>Não enviamos nenhum dado</strong> para servidores do desenvolvedor nem de terceiros. Não existe servidor próprio.</li>
+    <li>Não vendemos, compartilhamos nem usamos seus dados para publicidade, perfilamento ou treinamento de modelos.</li>
+  </ul>
+
+  <h2>Dados que a extensão acessa</h2>
+  <p>Mediante sua autorização (login Google), a extensão lê, pelas APIs oficiais do Google:</p>
+  <table>
+    <thead><tr><th>Dado</th><th>Para que serve</th><th>Escopo Google</th></tr></thead>
+    <tbody>
+      <tr><td>Seus contatos e "outros contatos" (nome, e-mail, foto)</td><td>Listar contatos para você escolher destinatários</td><td><code>contacts.readonly</code>, <code>contacts.other.readonly</code></td></tr>
+      <tr><td>Diretório da sua organização (nome, e-mail, departamento, foto)</td><td>Listar e buscar colegas</td><td><code>directory.readonly</code></td></tr>
+      <tr><td>Eventos do seu Google Calendar principal (título, horário, link)</td><td>Avisos e contagem regressiva das reuniões do dia</td><td><code>calendar.readonly</code></td></tr>
+    </tbody>
+  </table>
+  <p>Todos os escopos são <strong>somente leitura</strong>. A extensão não altera seus contatos nem seu calendário.</p>
+  <p>Dados criados por você na extensão: a lista de <strong>Favoritos</strong> (e-mail, nome e área que você informar), seus <strong>grupos de envio</strong> (nome do grupo e as pessoas que você escolher) e suas preferências de avisos.</p>
+  <p>Na página do Gmail, a extensão só lê o endereço da sua própria conta (para não listar você mesmo) e escreve os destinatários que você escolher nos campos do e-mail que você está redigindo. <strong>Ela não lê o conteúdo de e-mails.</strong></p>
+
+  <h2>Onde os dados ficam e como são protegidos</h2>
+  <ul>
+    <li>Favoritos, lista de contatos, fotos e reuniões ficam em <code>chrome.storage.local</code>, <strong>cifrados com AES-GCM de 256 bits</strong>. A chave é gerada no seu navegador, não é exportável e nunca sai dele.</li>
+    <li>O token de acesso do Google fica somente em memória e não é gravado em disco.</li>
+    <li>As páginas do Gmail não conseguem ler esse armazenamento; o acesso passa pelo componente interno da extensão.</li>
+    <li>A comunicação com o Google usa apenas HTTPS.</li>
+  </ul>
+
+  <h2>Compartilhamento</h2>
+  <p>Os dados trafegam apenas entre o seu navegador e as APIs do Google. Não há compartilhamento com terceiros.</p>
+
+  <h2>Retenção e exclusão</h2>
+  <ul>
+    <li>Os dados permanecem até você apagá-los.</li>
+    <li><strong>Desconectar</strong> nas opções revoga o acesso no Google e apaga reuniões, fotos e a lista do diretório.</li>
+    <li>Remover a extensão apaga todos os dados locais, inclusive os Favoritos.</li>
+    <li>Você pode revogar o acesso a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li><strong>Exportar .sqlite</strong> (opcional) gera um arquivo de backup <strong>sem cifra</strong> no local que você escolher; a guarda desse arquivo é sua responsabilidade.</li>
+  </ul>
+
+  <h2>Uso limitado (Google API Services)</h2>
+  <p>O uso e a transferência de informações recebidas das APIs do Google por esta extensão seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados de Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado. Os dados são usados apenas para oferecer as funções descritas acima e não são transferidos a terceiros, usados para publicidade nem lidos por pessoas.</p>
+
+  <h2>Crianças</h2>
+  <p>A extensão não se destina a menores de 13 anos.</p>
+
+  <h2>Alterações</h2>
+  <p>Mudanças nesta política serão publicadas nesta página, com a data atualizada.</p>
+
+  <h2>Contato</h2>
+  <p>Dúvidas ou pedidos sobre seus dados: <a href="mailto:rodrigobfcastros21@gmail.com">rodrigobfcastros21@gmail.com</a></p>
+</main>
+<footer>
+  Gmail, Google Calendar, Google Workspace e Chrome são marcas do Google LLC, que não patrocina nem endossa esta extensão.
+</footer>
+</body>
+</html>
