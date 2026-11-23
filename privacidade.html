@@ -23,6 +23,32 @@
 
   <p>A extensão <strong>Contatos para Gmail</strong> ajuda você a preencher os campos Para, Cc e Cco no Gmail com contatos favoritos e do diretório da sua organização, e avisa as próximas reuniões do Google Calendar. Esta política explica quais dados a extensão acessa e como são tratados.</p>
 
+  <h2>Quem somos</h2>
+  <p>A extensão Contatos para Gmail é desenvolvida e mantida por Rodrigo Castro, pessoa física, com sede no Rio de Janeiro/RJ, Brasil. Para qualquer assunto sobre privacidade, o contato é <a href="mailto:rodrigobfcastros21@gmail.com">rodrigobfcastros21@gmail.com</a>. Esta política vale para a extensão do Google Chrome "Contatos para Gmail" e para este site (<a href="index.html">página do app</a>).</p>
+
+  <h2>Finalidade do app</h2>
+  <p>A única finalidade da extensão é facilitar a escrita de e-mails no Gmail: ela mostra, dentro do Gmail, uma lista de contatos favoritos, seus contatos do Google e o diretório da sua organização, para você adicionar destinatários em Para, Cc ou Cco com um clique, e avisa as próximas reuniões do seu Google Calendar. Todas as funções abaixo existem somente para essa finalidade.</p>
+
+  <h2>Como acessamos, usamos, armazenamos e compartilhamos dados de usuário do Google</h2>
+  <p>Para funcionar, a extensão pede acesso a dados de usuário do Google (Google user data) por meio do login OAuth 2.0 da sua conta Google, e só depois da sua autorização na tela de permissões do Google. O fluxo completo é este:</p>
+  <ol>
+    <li><strong>Acesso.</strong> Você clica para conectar e autoriza os escopos somente leitura listados abaixo. O Chrome entrega à extensão um token de acesso temporário (<code>chrome.identity.getAuthToken</code>). Nenhuma senha é vista nem guardada pela extensão.</li>
+    <li><strong>Uso.</strong> Com o token, a extensão chama diretamente as APIs do Google (People API e Google Calendar API) a partir do seu navegador e usa as respostas apenas para exibir na tela as listas de contatos e as reuniões.</li>
+    <li><strong>Armazenamento.</strong> O resultado fica salvo somente no seu navegador, em <code>chrome.storage.local</code>, cifrado com AES-GCM de 256 bits. O token fica apenas em memória.</li>
+    <li><strong>Compartilhamento.</strong> Os dados não são enviados ao desenvolvedor nem a terceiros. Não existe servidor, banco de dados, análise de uso (analytics) ou rastreamento associado à extensão.</li>
+    <li><strong>Exclusão.</strong> Você apaga os dados com o botão Desconectar, removendo a extensão ou revogando o acesso na sua conta Google (detalhes em "Retenção e exclusão").</li>
+  </ol>
+
+  <h2>Informações que coletamos</h2>
+  <p>A extensão não coleta dados para o desenvolvedor: tudo é lido e guardado localmente no seu dispositivo. Os tipos de informação que ela trata são:</p>
+  <ul>
+    <li><strong>Informações pessoais de contatos:</strong> nome, endereço de e-mail, foto e, no diretório da organização, departamento. Origem: sua lista de contatos, "outros contatos" e o diretório do Google Workspace da sua organização.</li>
+    <li><strong>Informações de agenda:</strong> título, horário de início e fim e link das reuniões do seu calendário principal. Origem: Google Calendar.</li>
+    <li><strong>Informações que você cria:</strong> Favoritos (e-mail, nome e área), grupos de envio e preferências dos avisos de reunião.</li>
+    <li><strong>Endereço da sua conta no Gmail:</strong> lido na página do Gmail apenas para não listar você mesmo como destinatário.</li>
+  </ul>
+  <p>A extensão não coleta localização, histórico de navegação, dados financeiros, de saúde ou de autenticação.</p>
+
   <h2>Resumo</h2>
   <ul>
     <li>Os dados ficam <strong>apenas no seu navegador</strong>, em armazenamento cifrado.</li>
@@ -66,9 +92,22 @@
   <h2>Compartilhamento</h2>
   <p>Os dados trafegam apenas entre o seu navegador e as APIs do Google. Não há compartilhamento com terceiros.</p>
 
+  <h2>Segurança</h2>
+  <p>Adotamos medidas técnicas para proteger os dados locais: criptografia AES-GCM de 256 bits com chave não exportável gerada no navegador, token apenas em memória, comunicação somente por HTTPS, política de segurança de conteúdo restritiva e ausência de código carregado de fora do pacote da extensão. A extensão pede somente os escopos de leitura necessários.</p>
+
+  <h2>Permissões do navegador</h2>
+  <ul>
+    <li><code>storage</code>: guardar localmente (cifrados) os Favoritos, o cache de contatos e as preferências.</li>
+    <li><code>identity</code>: obter o acesso OAuth pela conta Google já conectada ao Chrome.</li>
+    <li><code>alarms</code>: renovar o acesso e checar as reuniões periodicamente.</li>
+    <li><code>notifications</code>: mostrar o aviso de reunião próxima.</li>
+    <li>Acesso a <code>mail.google.com</code>: exibir o painel no Gmail e preencher os campos de destinatário. Acesso às APIs do Google (<code>www.googleapis.com</code>, <code>people.googleapis.com</code>, <code>oauth2.googleapis.com</code>): ler contatos, diretório e agenda e revogar o acesso ao desconectar.</li>
+  </ul>
+
   <h2>Retenção e exclusão</h2>
   <ul>
-    <li>Os dados permanecem até você apagá-los.</li>
+    <li>Os dados permanecem no seu navegador até você apagá-los. O desenvolvedor não guarda cópia alguma.</li>
+    <li>Para apagar: abra as opções da extensão e clique em <strong>Desconectar</strong>, ou remova a extensão em chrome://extensions.</li>
     <li><strong>Desconectar</strong> nas opções revoga o acesso no Google e apaga reuniões, fotos e a lista do diretório.</li>
     <li>Remover a extensão apaga todos os dados locais, inclusive os Favoritos.</li>
     <li>Você pode revogar o acesso a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
